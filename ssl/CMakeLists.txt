@@ -39,7 +39,7 @@ set ( LIBSRC
   statem/statem_lib.c statem/statem_srvr.c
   )
 
-add_library( ssl ${LIBSRC} )
+add_library( ssl STATIC ${LIBSRC})
 
 target_link_libraries ( ssl crypto )
 

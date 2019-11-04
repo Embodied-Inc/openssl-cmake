@@ -267,7 +267,7 @@ else()
   add_submodule ( . threads_pthread.c )
 endif()
 
-add_library( crypto ${LIBSRC} ${OBJECTS_SRC} )
+add_library( crypto STATIC ${LIBSRC} ${OBJECTS_SRC})
 
 if( WIN32 AND NOT CYGWIN )
   target_link_libraries( crypto ws2_32 crypt32 )
